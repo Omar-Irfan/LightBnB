@@ -1,0 +1,10 @@
+INSERT INTO users (name, email, password)
+VALUES ('Mehmet The Conqueror', 'conquerer@fatih.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+('Sulieman The Magnificient', 'lawgiver@qanuni.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),('Selim The Grim', 'caliph@yavuz.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+
+INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active)
+VALUES (1, 'Fatih Sultan Camii', 'description', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sultan_Muhammet_Fatih_camii_%28cropped%29.jpg/220px-Sultan_Muhammet_Fatih_camii_%28cropped%29.jpg', 'https://www.turanakinci.com/wp-content/uploads/2014/11/fatih.1-700x460.jpg', 123, 30, 15, 20, 'Turkey', 'fatih st', 'Istanbul', 'Istanbul Province', 'ln1 435', TRUE), (2, 'Suleymaniye Camii', 'description', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sultan_Muhammet_Fatih_camii_%28cropped%29.jpg/220px-Sultan_Muhammet_Fatih_camii_%28cropped%29.jpg', 'https://www.turanakinci.com/wp-content/uploads/2014/11/fatih.1-700x460.jpg', 124, 31, 16, 21, 'Turkey', 'qanuni st', 'Istanbul', 'Istanbul Province', 'lo1 435', TRUE), (3, 'Selimiye Camii', 'description', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sultan_Muhammet_Fatih_camii_%28cropped%29.jpg/220px-Sultan_Muhammet_Fatih_camii_%28cropped%29.jpg', 'https://www.turanakinci.com/wp-content/uploads/2014/11/fatih.1-700x460.jpg', 124, 31, 16, 21, 'Turkey', 'yavuz st', 'Istanbul', 'Istanbul Province', 'lp1 435', TRUE);
+
+INSERT INTO reservations (start_date, end_date, property_id, guest_id) VALUES ('2018-09-11', '2018-09-13', 1, 2), ('2019-10-11', '2018-10-13', 2, 3), ('2020-12-14', '2021-01-13', 3, 2);
+
+INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message) VALUES (1, 2, 1, 4, 'message'), (2, 3, 2, 4, 'message'), (3, 2, 3, 4, 'message');
